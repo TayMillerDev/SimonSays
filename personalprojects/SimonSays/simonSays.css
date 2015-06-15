@@ -1,0 +1,184 @@
+body, html {
+	height: 100%;
+	margin: 0 auto;
+	background: #eee;
+}
+.font {
+	font-family: cursive;
+}
+.head {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #eee;
+}
+.frame {
+	width: 90%;
+	min-width: 700px;
+	height: 700px;
+	margin: 0 auto;
+	background: radial-gradient(#fff, #fff, #fff, #eee, #eee);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.border {
+	width: 550px;
+	position: relative;
+}
+.start {
+	width: 175px;
+	height: 175px;
+	position: absolute;
+	left: 190px;
+	top: 190px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #000;
+	border-radius: 50%;
+}
+.clickStart {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	background: #333;
+	font-size: 30px;
+	color: #fff;
+}
+.clickGreen {
+	background: #68ff54;
+}
+.gameOver {
+	width: 550px;
+	height:550px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: radial-gradient(transparent, #444);
+	border-radius: 50%;
+	box-shadow: 15px 15px 15px gray;
+}
+.gameOvertext {
+	margin-top: 75px;
+	margin-bottom:25px;
+	font-size: 50px;
+	color: #fff;
+}
+.finalScore {
+	font-size: 35px;
+	color: #fff;
+}
+p {
+	font-size: 20px;
+	color: #fff;
+}
+input {
+	height: 20px;
+	border-radius: 10px;
+	text-align: center
+}
+.clickHolder {
+	height: 100px;
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+}
+.content {
+	width: 550px;
+	height:550px;
+	background: #000;
+	border-radius: 50%;
+	overflow: hidden; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 15px 15px 15px gray;
+}
+.simon {
+
+}
+.top {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 13px;
+}
+.bottom {
+	margin-top: 13px;
+	display: flex;
+	flex-direction: row;
+}
+/*Attempt TWO */
+.tab {
+	height: 250px;
+	width: 250px;
+	background: gray;
+	margin:0 7px 0 7px;
+}
+.topLeft {
+	border-top-left-radius: 100%;
+}
+.topRight {
+	border-top-right-radius: 100%;
+}
+.bottomRight {
+	border-bottom-right-radius: 100%;
+}
+.bottomLeft {
+	border-bottom-left-radius: 100%;
+}
+.silly {
+	background: yellow;
+}
+/*COLORS!!!*/
+.red {
+	background: #FF0800;
+}
+.yellow {
+	background: #FFFF33;
+}
+.blue {
+	background: #0070FF;
+}
+.green {
+	background: #76EE00;
+}
+/* GLOWING COLOR!*/
+ /*GamePlay Section*/
+.gamePlay {
+	margin: 50px;
+ }
+ button {
+ 	margin: 20px;
+ 	height: 75px;
+ 	width: 200px;
+ 	border: 2px solid silver;
+ 	border-radius: 20px;
+ 	background: #68ff54;
+ 	font-size: 20px;
+ }
+
+ .scoreBoard {
+ 	
+ }
+ .topTen {
+ 	width: 60%;
+ 	margin:10px auto;
+ 	background: #ccc;
+ }
+ .scoreHolder{
+ 	margin: 0 auto;
+ 	width: 300px;
+ }
+ .score {
+ 	margin: 5px auto;
+ 	text-align: center;
+ 	display: flex;
+ 	justify-content: space-between;
+ }

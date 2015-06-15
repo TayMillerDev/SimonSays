@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="simonApp">
+<head>
+	<title>Simon Says Colors!</title>
+	<link rel="stylesheet" type="text/css" href="simonSays.css">
+</head>
+<body ng-controller="simonCtrl">
+	<div class="head">		
+		<header>
+			<h1 class="font">
+				{{ simon }}
+			</h1>
+		</header>
+	</div>
+
+	<div class="navBar">
+		<h1 class="font">Score : {{ points }}</h1>
+
+	</div>
+
+	<div></div>
+	<div class="frame">
+		<div class="border">
+			<div class="start">
+				<div class="clickStart">
+					<div class="clickStart clickGreen" ng-show="hideStart" ng-click='startGame()'>
+						START
+					</div>
+				</div>
+			</div>
+			<div class="gameOver" ng-hide="hider">			
+					<h1 class="gameOvertext" ng-style="flash">GAME OVER</h1>
+					<div class="finalScore"> Your Score: {{ points }}</div>
+					<p>Enter your Name!	To go on the HighScore Board!</p>
+					<input type="text" placeholder="Enter Name" maxlength=20 ng-model="userName"/>
+					<div class="clickHolder"> 
+						<button ng-click="submit()">Submit</button> 
+						<button ng-click="exit()">Exit</button>
+					</div>
+			</div>
+
+			<div class="content" ng-style="beginSimon">
+				<div class='simonSays'>
+					<div class="top">				
+						<div class="tab topLeft red" ng-click="select('tl')" ng-style= 'topRed' simon-dir color="tl" array="userArray" func="turns()"></div>
+
+						<div class=" tab topRight yellow" ng-click="select('tr')" ng-style="topYellow" simon-dir color="tr" array="userArray" func="turns()"></div>
+					</div>
+					<div class="bottom">
+						
+						<div class="tab bottomLeft blue" ng-click="select('bl')" ng-style="blue" simon-dir color="bl" array="userArray" func="turns()"></div>
+
+						<div class="tab bottomRight green" type="button" ng-click="select('br')" ng-style="green" simon-dir array="userArray" color="br" func="turns()"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="scoreBoard">
+		<hr>
+		<div class="topTen">
+			<h1>Recent Scores</h1>
+			
+			<ul class="scoreHolder"ng-repeat="playa in AllScores | orderBy: 'username'">
+				<div class="score">
+					<div>{{ playa.username }}</div> 
+
+					<div>{{ playa.score }}</div>
+				</div>
+				
+			</ul>
+		</div>
+	</div>
+<!-- Scripts Below -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+<script src="js/simonApp.js"></script>
+<script src="js/simonService.js"></script>
+<script src="js/simonDir.js"></script>
+<script src="js/simonSays.js"></script>
+
+</body>
+</html>
